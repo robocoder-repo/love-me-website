@@ -1,0 +1,59 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 20vh;
+}
+
+h1 {
+    color: #ff4081;
+    font-size: 3em;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e91e63;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ff4081;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(720deg); }
+}
+
+.heart {
+    position: fixed;
+    top: 100vh;
+    font-size: 20px;
+    color: #ff4081;
+    z-index: 0;
+    animation: float 15s linear infinite;
+}
