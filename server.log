@@ -4,3 +4,5 @@
 127.0.0.1 - - [27/Oct/2024 17:45:06] "GET /script.js HTTP/1.1" 200 -
 127.0.0.1 - - [27/Oct/2024 17:45:07] code 404, message File not found
 127.0.0.1 - - [27/Oct/2024 17:45:07] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [27/Oct/2024 17:45:22] code 404, message File not found
+127.0.0.1 - - [27/Oct/2024 17:45:22] "GET /robots.txt HTTP/1.1" 404 -
