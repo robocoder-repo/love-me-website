@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     yesBtn.addEventListener('click', () => {
         result.textContent = 'Love you too! ❤️';
         createHearts(50);
+        createCartoon('🐱', 10);
     });
 
     noBtn.addEventListener('click', () => {
         result.textContent = 'Really?';
         moveButton(noBtn);
+        createCartoon('🐶', 5);
     });
 
     createHearts(20);
@@ -28,13 +30,22 @@ function moveButton(button) {
 }
 
 function createHearts(count) {
+    createFloatingElements('❤️', count, 'heart');
+}
+
+function createCartoon(emoji, count) {
+    createFloatingElements(emoji, count, 'cartoon');
+}
+
+function createFloatingElements(content, count, className) {
     for (let i = 0; i < count; i++) {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.textContent = '❤️';
-        heart.style.left = `${Math.random() * 100}vw`;
-        heart.style.animationDuration = `${Math.random() * 5 + 10}s`;
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 15000);
+        const element = document.createElement('div');
+        element.classList.add(className);
+        element.textContent = content;
+        element.style.left = `${Math.random() * 100}vw`;
+        element.style.top = `${Math.random() * 100}vh`;
+        element.style.animationDuration = `${Math.random() * 5 + 10}s`;
+        document.body.appendChild(element);
+        setTimeout(() => element.remove(), 15000);
     }
 }
